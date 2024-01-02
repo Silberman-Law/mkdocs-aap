@@ -24,6 +24,10 @@ theme:
 extra_css:
   - stylesheets/extra.css
 
+plugins:
+    - search
+    - mermaid2
+
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
@@ -41,5 +45,12 @@ markdown_extensions:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
 
+markdown_extensions:
+  - pymdownx.superfences:
+        # make exceptions to highlighting of code:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid_custom
 copyright: |
   &copy; 2023 <a href="https://github.com/Silberman-Law/mkdocs-aap"  target="_blank" rel="noopener">Silberman Law</a>
