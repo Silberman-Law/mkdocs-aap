@@ -1,4 +1,4 @@
-site_name: Silberman Law - AAP
+site_name: Silberman Law - AAP Documentation
 site_url: https://silberman-law.github.io/mkdocs-aap/
 theme:
   name: material
@@ -7,6 +7,7 @@ theme:
     - navigation.sections
     - toc.integrate
     - navigation.top
+    - navigation.expand
     - search.suggest
     - search.highlight
     - content.tabs.link
@@ -52,5 +53,8 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:mermaid2.fence_mermaid_custom
+
+
+
 copyright: |
   &copy; 2023 <a href="https://github.com/Silberman-Law/mkdocs-aap"  target="_blank" rel="noopener">Silberman Law</a>
