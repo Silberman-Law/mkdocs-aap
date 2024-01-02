@@ -17,6 +17,3 @@ public function login() {
     return array('status'=>'200', 'message'=>'All good', 'data'=>array());
 }
 ```
-
-## Icons
-:smile:
