@@ -5,9 +5,9 @@ https://mermaid.js.org/syntax/classDiagram.html
 -->
 ```mermaid
 classDiagram
-    user <|-- user_login
-    user_role --|> user_login
-    roles --|> user_role
+    users <|-- user_login
+    user_roles --|> user_login
+    roles --|> user_roles
     note for roles "Roles defined by\nrole/description"
     templates --|> template_columns
     class users {
@@ -64,5 +64,13 @@ classDiagram
         +datetime createdon
         +id(PK)
         +template_id(FK)
+    }
+    class clients {
+        +int id
+        +string name
+        +string description
+        +int active
+        +datetime createdon
+        +id(PK)
     }
 ```
