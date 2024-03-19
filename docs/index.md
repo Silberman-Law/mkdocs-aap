@@ -13,9 +13,15 @@ Users are defined as people with restricted access to the application based on r
 
 ### Login/Logout
 ``` py title='login function'
-public function login() {
-    $username = 'brad';
-    $password = '123';
+public function login($arg_username, $arg_password) {
+    if($arg_username == "") {
+        return array('status'=>'2500', 'message'=>'Username Required', 'data'=>array()); 
+    }
+    if($arg_password == "") {
+        return array('status'=>'2500', 'message'=>'Password Required', 'data'=>array()); 
+    }
+    $username = $arg_username;
+    $password = $arg_password;
     return array('status'=>'200', 'message'=>'All good', 'data'=>array());
 }
 ```
